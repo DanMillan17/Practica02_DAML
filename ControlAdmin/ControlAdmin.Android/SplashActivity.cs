@@ -12,9 +12,8 @@ using System.Text;
 namespace ControlAdmin.Droid
 {
     [Activity(Label = "SplashActivity", Theme = "@style/SplashTheme",
-        MainLauncher = true,
-        NoHistory = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.ScreenSize
-        | Android.Content.PM.ConfigChanges.Orientation)]
+        MainLauncher = true, NoHistory = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.ScreenSize)]
+   
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -22,6 +21,7 @@ namespace ControlAdmin.Droid
             base.OnCreate(savedInstanceState);
 
             // Create your application here
+            StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }
     }
 }

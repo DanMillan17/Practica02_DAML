@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlAdmin.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#9ccc04" Padding="24" CornerRadius="0">
+                <Label Text="Bienvenido" HorizontalTextAlignment="Center" TextColor="White" FontSize="28"/>
+            </Frame>
+            <Label Text="Control Administrativo" HorizontalTextAlignment="Center" FontSize="Title" Padding="30,10,30,10"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="1" Margin="0,0,0,20">
+                        <Image Source="@drawable/logo_StartPage" HeightRequest="150" WidthRequest="150"/>
+                        <Label Text="Control administrativo" TextColor="Black" FontSize="16" FontAttributes="None" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="3">
+                        <Frame Padding="0,4,0,4" HasShadow="False">
+                            <Button x:Name="btnRegistro" Text="Registrarse" HeightRequest="35" WidthRequest="185"
+                                    TextColor="Black" BackgroundColor="White" FontSize="10"/>
+                        </Frame>
+
+                        <Frame Padding="0,4,0,4" HasShadow="True">
+                            <Button x:Name="btnCuenta" Text="Ya tiene una cuenta" HeightRequest="35" WidthRequest="185"
+                                   TextColor="Black" BackgroundColor="White" FontSize="10"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="4">
+                        <Label Text="@ 2021 Control Admin Derechos Reservados ISC DAML" TextColor="Black"
+                               FontSize="10" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
